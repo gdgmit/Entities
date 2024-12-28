@@ -20,7 +20,7 @@ public class Orders {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long orderId;
 
-    @Column(columnDefinition = "DATETIME DEFAULT CURRENT_TIMESTAMP")
+    @Column()
     private LocalDateTime orderDate = LocalDateTime.now();
 
     @Enumerated(EnumType.STRING)

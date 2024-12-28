@@ -30,7 +30,7 @@ public class Snacks {
     @Lob
     private String snImageUrl;
 
-    @Column(nullable = false,columnDefinition = "DEFAULT 0")
+    @Column(nullable = false)
     private Integer snCurrentQuantity = 0;
 
     // Getters and Setters

@@ -32,7 +32,7 @@ public class Products {
     @Column(nullable = false)
     private ProductCategory prCategory;
 
-    @Column(columnDefinition = "DEFAULT 0")
+    @Column()
     private Integer prCurrentQuantity = 0;
 
     @ManyToMany(mappedBy = "products")

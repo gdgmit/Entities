@@ -25,7 +25,7 @@ public class Provisions {
     @Column(nullable = false,precision = 10, scale = 2)
     private BigDecimal provPrice;
 
-    @Column(columnDefinition = "DEFAULT 0")
+    @Column()
     private Integer provQuantity = 0;
 
     @Column(nullable = false)
