@@ -1,4 +1,4 @@
-package com.example.entities.entities;
+package com.example.entities.Entities;
 
 public enum TransactionType {
     ONLINE, CASH

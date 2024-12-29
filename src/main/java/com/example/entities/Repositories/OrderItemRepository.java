@@ -1,6 +1,6 @@
 package com.example.entities.Repositories;
 
-import com.example.entities.entities.OrderItem;
+import com.example.entities.Entities.OrderItem;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

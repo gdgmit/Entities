@@ -1,6 +1,6 @@
 package com.example.entities.Repositories;
 
-import com.example.entities.entities.QR;
+import com.example.entities.Entities.QR;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
