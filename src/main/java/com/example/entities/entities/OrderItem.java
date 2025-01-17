@@ -2,7 +2,8 @@ package com.example.entities.Entities;
 
 import jakarta.persistence.*;
 import lombok.*;
-
+import com.example.entities.Enums.OrderStatus;
+import com.example.entities.Enums.ItemType;
 import java.math.BigDecimal;
 
 @Entity
@@ -16,15 +17,22 @@ public class OrderItem {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long itemId;
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name = "orderId", nullable = false)
     private Orders order;
 
-    @ManyToOne
-    @JoinColumn(name = "prId", nullable = false)
-    private Products product;
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private OrderStatus deliveryStatus;//delivery status of the particular item
+
+    @Column(nullable=false)
+    private Long itemId; //references either prId or snacksId (without fk constraint)
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private ItemType itemType; //indicates whether the item is a snack or product
 
     @Column(nullable = false)
     private Integer itemQuantity;

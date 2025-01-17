@@ -2,7 +2,9 @@ package com.example.entities.Entities;
 
 import jakarta.persistence.*;
 import lombok.*;
-
+import com.example.entities.Enums.TransactionType;
+import com.example.entities.Enums.PaymentStatus;
+import com.example.entities.Enums.OrderStatus;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.Set;
@@ -25,7 +27,7 @@ public class Orders {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private OrderStatus orderStatus;
+    private OrderStatus orderStatus; //set to DELIVERED only if all items in this order are DELIVERED
 
     @Column(nullable = false,precision = 10, scale = 2)
     private BigDecimal totalAmount;
@@ -35,7 +37,7 @@ public class Orders {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private TransactionType transactionType;
+    private TransactionType transactionType = TransactionType.ONLINE;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)

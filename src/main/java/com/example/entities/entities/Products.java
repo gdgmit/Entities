@@ -2,7 +2,7 @@ package com.example.entities.Entities;
 
 import jakarta.persistence.*;
 import lombok.*;
-
+import com.example.entities.Enums.ProductCategory;
 import java.math.BigDecimal;
 import java.util.Set;
 
